@@ -18,7 +18,6 @@
     pkgs.gdu
     pkgs.minikube
     pkgs.mosh
-    pkgs.ripgrep
     pkgs.tree-sitter
   ];
 
@@ -47,7 +46,6 @@
     settings.editor = "nvim";
   };
 
-  programs.fzf.enable = true;
   programs.bottom.enable = true;
   programs.lazygit.enable = true;
 

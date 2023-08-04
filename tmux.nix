@@ -11,4 +11,6 @@
       set -as terminal-features ",xterm-256color:RGB"
     '';
   };
+
+  programs.bat.enable = true;
 }

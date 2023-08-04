@@ -20,7 +20,6 @@
   #    "rustc"
   #  ])
     pkgs.gdu
-    pkgs.ripgrep
     pkgs.tree-sitter
   ];
 

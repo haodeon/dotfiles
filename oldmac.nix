@@ -22,9 +22,7 @@
     ])
     pkgs.gdu
     pkgs.less
-    pkgs.ripgrep
     pkgs.tree-sitter
-    pkgs.unison-ucm
     pkgs.wget2
   ];
 
@@ -67,7 +65,6 @@
     '';
   };
 
-  programs.fzf.enable = true;
   programs.bottom.enable = true;
 
   nixpkgs.overlays = [ inputs.fenix.overlays.default ];
