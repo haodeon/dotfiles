@@ -19,6 +19,7 @@
       "rust-src"
       "rust-std"
       "rustc"
+      "rustfmt"
     ])
     pkgs.gdu
     pkgs.less

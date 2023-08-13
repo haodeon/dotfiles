@@ -327,7 +327,8 @@ local config = {
         "jay-babu/mason-null-ls.nvim",
         -- overrides `require("mason-null-ls").setup(...)`
         opts = {
-          ensure_installed = { "fantomas", "rustfmt" },
+          ensure_installed = { "fantomas" },
+          handlers = { function() end, },
         },
       },
       {

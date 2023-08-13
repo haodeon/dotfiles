@@ -49,7 +49,7 @@
       devShells.python = pkgs.mkShell {
         buildInputs = with pkgs; [
           poetry
-          (python310.withPackages (ps: with ps; [ black pytest pytest-subtests ]))
+          (python3.withPackages (ps: with ps; [ black pytest pytest-subtests ]))
         ]
         ++ lib.optionals stdenv.isDarwin [
           libffi
