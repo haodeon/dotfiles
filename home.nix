@@ -13,12 +13,11 @@
   home.homeDirectory = "/home/haodeon";
 
   home.packages = [
+    pkgs.difftastic
     pkgs.dotnet-sdk_7
     pkgs.exercism
-    pkgs.gdu
     pkgs.minikube
     pkgs.mosh
-    pkgs.tree-sitter
   ];
 
   home.sessionVariables = {

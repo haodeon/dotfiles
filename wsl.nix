@@ -19,8 +19,6 @@
   #    "rust-std"
   #    "rustc"
   #  ])
-    pkgs.gdu
-    pkgs.tree-sitter
   ];
 
   home.sessionVariables = {

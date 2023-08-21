@@ -21,9 +21,7 @@
       "rustc"
       "rustfmt"
     ])
-    pkgs.gdu
     pkgs.less
-    pkgs.tree-sitter
     pkgs.wget2
   ];
 
