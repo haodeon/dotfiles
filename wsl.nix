@@ -12,6 +12,7 @@
   home.homeDirectory = "/home/deon";
 
   home.packages = [
+    pkgs.azure-cli
     pkgs.dotnet-sdk_7
   #  (pkgs.fenix.stable.withComponents [
   #    "cargo"

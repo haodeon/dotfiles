@@ -26,6 +26,13 @@
       };
       toolchain = pkgs.rust-bin.fromRustupToolchainFile ./toolchain.toml;
     in {
+      devShells.cobol = pkgs.mkShell {
+        packages = [
+          pkgs.gmp
+          pkgs.gnu-cobol.bin
+          pkgs.jdk17_headless
+        ];
+      };
       devShells.clojure = pkgs.mkShell {
         packages = [
           pkgs.jdk17_headless
