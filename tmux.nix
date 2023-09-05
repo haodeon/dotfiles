@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   programs.tmux = {
@@ -7,6 +7,9 @@
     keyMode = "vi";
     mouse = true;
     terminal = "tmux-256color";
+    plugins = with pkgs; [
+      tmuxPlugins.nord
+    ];
     extraConfig = ''
       set -as terminal-features ",xterm-256color:RGB"
     '';
