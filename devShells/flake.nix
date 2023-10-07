@@ -42,7 +42,6 @@
       devShells.k8s = pkgs.mkShell {
         packages = [
           pkgs.k9s
-          pkgs.kind
           pkgs.kluctl
           pkgs.kubectl
         ];
