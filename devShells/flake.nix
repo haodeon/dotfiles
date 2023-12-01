@@ -46,6 +46,11 @@
           pkgs.kubectl
         ];
       };
+      devShells.lua = pkgs.mkShell {
+        buildInputs = with pkgs; [
+          (lua5_4.withPackages (ps: with ps; [ busted ]))
+        ];
+      };
       devShells.node = pkgs.mkShell {
         packages = [
           pkgs.nodejs-18_x
