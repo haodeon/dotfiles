@@ -12,7 +12,7 @@
   home.homeDirectory = "/Users/deon";
 
   home.packages = [
-    pkgs.dotnet-sdk_7
+    pkgs.dotnet-sdk_8
     pkgs.exercism
     (pkgs.fenix.stable.withComponents [
       "cargo"

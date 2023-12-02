@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./git.nix
     ./neovim.nix
     ./tmux.nix
     ./zsh.nix
@@ -13,8 +14,7 @@
   home.homeDirectory = "/home/haodeon";
 
   home.packages = [
-    pkgs.difftastic
-    pkgs.dotnet-sdk_7
+    pkgs.dotnet-sdk_8
     pkgs.exercism
     pkgs.minikube
     pkgs.mosh
@@ -46,7 +46,6 @@
   };
 
   programs.bottom.enable = true;
-  programs.lazygit.enable = true;
 
   nixpkgs.overlays = [
     (final: prev: {
