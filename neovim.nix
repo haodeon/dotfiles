@@ -8,7 +8,7 @@
   };
 
   xdg.configFile."nvim".source = inputs.astronvim;
-  xdg.configFile."astronvim/lua/user/init.lua".source = ./astronvim/init.lua;
+  xdg.configFile."astronvim/lua/user/init.lua".source = ./neovim/init.lua;
 
   programs.fzf.enable = true;
   programs.ripgrep.enable = true;
