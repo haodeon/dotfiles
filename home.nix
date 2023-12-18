@@ -39,6 +39,9 @@
 
   programs.gh = {
     enable = true;
+    settings = {
+      version = "1";
+    };
     settings.aliases = {
       co = "pr checkout";
     };
