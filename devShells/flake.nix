@@ -53,14 +53,17 @@
       };
       devShells.node = pkgs.mkShell {
         packages = [
-          pkgs.nodejs-18_x
-          pkgs.nodejs-18_x.pkgs.pnpm
+          pkgs.nodejs_20
+          pkgs.nodejs_20.pkgs.pnpm
         ];
       };
       devShells.python = pkgs.mkShell {
         buildInputs = with pkgs; [
+          python3
+          python3Packages.black
+          python3Packages.pytest
+          python3Packages.pytest-subtests
           poetry
-          (python3.withPackages (ps: with ps; [ black pytest pytest-subtests ]))
         ]
         ++ lib.optionals stdenv.isDarwin [
           libffi
