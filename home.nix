@@ -3,7 +3,8 @@
 {
   imports = [
     ./git.nix
-    ./neovim.nix
+    ./neovim
+    ./nushell.nix
     ./tmux.nix
     ./zsh.nix
   ];

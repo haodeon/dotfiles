@@ -10,16 +10,16 @@
     plugins = with pkgs; [
       {
         plugin = tmuxPlugins.power-theme.overrideAttrs ( _: {
-          version = "unstable-2023-11-08";
+          version = "unstable-2024-02-20";
           src = pkgs.fetchFromGitHub {
             owner = "wfxr";
             repo = "tmux-power";
-            rev = "1d73c304573b3ae369567d2ef635f0e1c3de7ecc";
-            sha256 = "sha256-HOUnLm2GSvJkCxK9ofM5p2I9xpF6Se44/8a/bkwrnmw=";
+            rev = "2e362c50e5772ba1d13a00628baba558b4220f41";
+            sha256 = "sha256-1hjQXC7261DiwrZ54PiwMLJM62srmP8koPNnTEp2zdI=";
           };
         });
         extraConfig = ''
-          set -g @tmux_power_theme 'everforest'
+          set -g @tmux_power_theme 'coral'
         '';
       }
     ];
