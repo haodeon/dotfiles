@@ -44,6 +44,7 @@
           pkgs.k9s
           pkgs.kluctl
           pkgs.kubectl
+          pkgs.kubernetes-helm
         ];
       };
       devShells.lua = pkgs.mkShell {
