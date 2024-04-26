@@ -12,10 +12,6 @@
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    astronvim = {
-      url = "github:AstroNvim/AstroNvim";
-      flake = false;
-    };
   };
 
   outputs = { nixpkgs, home-manager, ... } @ inputs:

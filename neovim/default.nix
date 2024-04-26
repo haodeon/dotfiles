@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   programs.neovim = {
@@ -7,8 +7,13 @@
     withRuby = false;
   };
 
-  xdg.configFile."nvim".source = inputs.astronvim;
-  xdg.configFile."astronvim/lua/user/init.lua".source = ./init.lua;
+  xdg.configFile."nvim" = {
+    source = ./config;
+    recursive = true;
+  };
+  xdg.configFile."nvim/lazy-lock.json" = {
+    source = config.lib.file.mkOutOfStoreSymlink "${config.xdg.configHome}/home-manager/neovim/lazy-lock.json";
+  };
   xdg.dataFile."nvim/site/syntax/8th.vim".source = ./8th.vim;
 
   programs.fzf.enable = true;
