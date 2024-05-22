@@ -19,6 +19,7 @@
     pkgs.exercism
     pkgs.minikube
     pkgs.mosh
+    pkgs.unison-ucm
   ];
 
   home.sessionVariables = {

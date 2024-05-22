@@ -15,6 +15,7 @@
   home.packages = [
     pkgs.azure-cli
     pkgs.dotnet-sdk_8
+    pkgs.unison-ucm
   #  (pkgs.fenix.stable.withComponents [
   #    "cargo"
   #    "rust-src"

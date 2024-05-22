@@ -11,6 +11,7 @@ return {
       "python",
       "rust",
       "toml",
+      "unison",
       "yaml",
       -- add more arguments for adding more treesitter parsers
     })
