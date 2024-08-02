@@ -3,10 +3,10 @@
 
 ---@type LazySpec
 return {
-  {
-    "adelarsq/neofsharp.vim",
-    ft = "fsharp",
-  },
+  -- {
+  --   "adelarsq/neofsharp.vim",
+  --   ft = "fsharp",
+  -- },
   { "simrat39/rust-tools.nvim", lazy = true },
   {
     "unisonweb/unison",
