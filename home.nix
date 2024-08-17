@@ -15,10 +15,10 @@
   home.homeDirectory = "/home/haodeon";
 
   home.packages = [
+    pkgs.docker-compose
     pkgs.dotnet-sdk_8
     pkgs.exercism
     pkgs.minikube
-    pkgs.mosh
     pkgs.unison-ucm
   ];
 
@@ -51,14 +51,4 @@
   };
 
   programs.bottom.enable = true;
-
-  nixpkgs.overlays = [
-    (final: prev: {
-      mosh = prev.mosh.overrideAttrs ({ postInstall ? "", ... }: {
-        postInstall = postInstall + ''
-          wrapProgram $out/bin/mosh-server --set LOCALE_ARCHIVE ${pkgs.glibcLocales}/lib/locale/locale-archive;
-        '';
-      });
-    })
-  ];
 }

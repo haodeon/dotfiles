@@ -15,6 +15,7 @@
   home.packages = [
     pkgs.azure-cli
     pkgs.dotnet-sdk_8
+    pkgs.oci-cli
     pkgs.unison-ucm
   #  (pkgs.fenix.stable.withComponents [
   #    "cargo"
@@ -54,7 +55,6 @@
       credential.helper = "/mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe";
     };
   };
-
 
   #nixpkgs.overlays = [ inputs.fenix.overlays.default ];
 }
