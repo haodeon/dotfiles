@@ -60,7 +60,6 @@
       devShells.python = pkgs.mkShell {
         buildInputs = with pkgs; [
           python3
-          python3Packages.black
           python3Packages.pytest
           python3Packages.pytest-subtests
           poetry

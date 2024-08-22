@@ -21,6 +21,13 @@
 
   programs.starship = {
     enable = true;
+    settings = {
+      gcloud = {
+        format = "on [$symbol$region(\($project\))]($style) ";
+        detect_env_vars = [ "IN_NIX_SHELL" ];
+        style = "bold yellow";
+      };
+    };
     enableZshIntegration = true;
   };
 }

@@ -3,6 +3,12 @@
 {
   programs.neovim = {
     enable = true;
+    extraWrapperArgs = [
+      "--prefix"
+      "PATH"
+      ":"
+      "${pkgs.lib.makeBinPath [ pkgs.stdenv.cc pkgs.binutils pkgs.gnumake pkgs.python3 ]}"
+    ];
     withPython3 = true;
     withRuby = false;
   };
