@@ -5,9 +5,10 @@ return {
   "nvim-treesitter/nvim-treesitter",
   opts = {
     ensure_installed = {
-      "fsharp",
+      -- "fsharp",
       "lua",
       "nix",
+      "powershell",
       "python",
       "rust",
       "toml",

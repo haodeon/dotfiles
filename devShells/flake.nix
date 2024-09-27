@@ -53,8 +53,8 @@
       };
       devShells.node = pkgs.mkShell {
         packages = [
-          pkgs.nodejs_20
-          pkgs.nodejs_20.pkgs.pnpm
+          pkgs.nodejs_22
+          pkgs.nodejs_22.pkgs.pnpm
         ];
       };
       devShells.python = pkgs.mkShell {
