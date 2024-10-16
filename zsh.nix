@@ -4,7 +4,11 @@
   programs.zsh = {
     enable = true;
     history.expireDuplicatesFirst = true;
-    historySubstringSearch.enable = true;
+    historySubstringSearch = {
+      enable = true;
+      searchUpKey = ["^[OA" "^[[A"];
+      searchDownKey = ["^[OB" "^[[B"];
+    };
     initExtra = ''
       nd() { nix develop $1 -c $SHELL }
       export GPG_TTY=$TTY

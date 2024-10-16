@@ -7,7 +7,7 @@
       "--prefix"
       "PATH"
       ":"
-      "${pkgs.lib.makeBinPath [ pkgs.stdenv.cc pkgs.binutils pkgs.gnumake pkgs.python3 ]}"
+      "${pkgs.lib.makeBinPath [ pkgs.stdenv.cc pkgs.binutils pkgs.gnumake pkgs.python3 pkgs.unzip ]}"
     ];
     withPython3 = true;
     withRuby = false;
@@ -28,5 +28,9 @@
   home.packages = with pkgs; [
     gdu
     tree-sitter
+    lua-language-server
+    regal
+    ruff
+    stylua
   ];
 }

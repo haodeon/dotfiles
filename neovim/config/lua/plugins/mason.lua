@@ -10,8 +10,6 @@ return {
       ensure_installed = {
         "fsautocomplete",
         "jedi_language_server",
-        "lua_ls",
-        "ruff_lsp",
         "rust_analyzer",
         -- add more arguments for adding more language servers
       },
@@ -24,7 +22,6 @@ return {
     opts = {
       ensure_installed = {
         "fantomas",
-        "stylua",
         -- add more arguments for adding more null-ls sources
       },
       handlers = {

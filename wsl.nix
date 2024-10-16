@@ -35,10 +35,6 @@
   programs.home-manager.enable = true;
 
   programs.zsh = {
-    historySubstringSearch = {
-      searchUpKey = "^[OA";
-      searchDownKey = "^[OB";
-    };
     initExtra = ''
       case ":$PATH:" in
       *":$PNPM_HOME:"*) ;;
