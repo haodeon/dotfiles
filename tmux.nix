@@ -25,6 +25,7 @@
     ];
     extraConfig = ''
       set -as terminal-features ",xterm-256color:RGB"
+      set -s command-alias[6] "nu=new-window nu"
     '';
   };
 

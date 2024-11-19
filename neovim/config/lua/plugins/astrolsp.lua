@@ -40,6 +40,7 @@ return {
       "lua_ls",
       "regal",
       "ruff",
+      "rust_analyzer",
       "unison",
     },
     -- customize language server configuration options passed to `lspconfig`

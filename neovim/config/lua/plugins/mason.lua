@@ -10,7 +10,6 @@ return {
       ensure_installed = {
         "fsautocomplete",
         "jedi_language_server",
-        "rust_analyzer",
         -- add more arguments for adding more language servers
       },
     },
