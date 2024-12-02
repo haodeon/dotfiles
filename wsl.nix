@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./dev
     ./git.nix
     ./neovim
     ./nushell.nix
@@ -14,9 +15,7 @@
 
   home.packages = [
     pkgs.azure-cli
-    pkgs.dotnet-sdk_8
     pkgs.oci-cli
-    pkgs.unison-ucm
   #  (pkgs.fenix.stable.withComponents [
   #    "cargo"
   #    "rust-src"
@@ -26,7 +25,6 @@
   ];
 
   home.sessionVariables = {
-    DOTNET_ROOT = "${config.home.profileDirectory}";
     PNPM_HOME = "${config.home.homeDirectory}/.local/share/pnpm";
   };
 
