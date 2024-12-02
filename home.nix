@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./dev
     ./git.nix
     ./neovim
     ./nushell.nix
@@ -16,15 +17,10 @@
 
   home.packages = [
     pkgs.docker-compose
-    pkgs.dotnet-sdk_8
+    pkgs.glow
     pkgs.exercism
     pkgs.minikube
-    pkgs.unison-ucm
   ];
-
-  home.sessionVariables = {
-    DOTNET_ROOT = "${config.home.profileDirectory}";
-  };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage

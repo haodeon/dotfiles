@@ -30,7 +30,6 @@
     tree-sitter
     lua-language-server
     regal
-    ruff
     rust-analyzer
     stylua
   ];
