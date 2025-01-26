@@ -1,5 +1,5 @@
--- This will run last in the setup process and is a good place to configure
--- things like custom filetypes. This just pure lua so anything that doesn't
+-- This will run last in the setup process.
+-- This is just pure lua so anything that doesn't
 -- fit in the normal config locations above can go here
 
 ---@class ParserConfig
@@ -23,16 +23,3 @@ local wsl_clipboard = {
 
 -- Check the PATH environment variable and set vim.g.clipboard if the condition is met
 if string.find(vim.env.PATH, "/mnt/c/Windows/system32") then vim.g.clipboard = wsl_clipboard end
-
--- Set up custom filetypes
--- vim.filetype.add {
---   extension = {
---     foo = "fooscript",
---   },
---   filename = {
---     ["Foofile"] = "fooscript",
---   },
---   pattern = {
---     ["~/%.config/foo/.*"] = "fooscript",
---   },
--- }

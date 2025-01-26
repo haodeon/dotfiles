@@ -6,21 +6,15 @@
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    unison-nix = {
-      url = "github:ceedubs/unison-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
-    };
   };
 
-  outputs = { self, nixpkgs, flake-utils, rust-overlay, unison-nix }:
+  outputs = { self, nixpkgs, flake-utils, rust-overlay }:
     flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = import nixpkgs {
         inherit system;
         overlays = [
           rust-overlay.overlays.default
-          unison-nix.overlay
         ];
       };
       toolchain = pkgs.rust-bin.fromRustupToolchainFile ./toolchain.toml;
@@ -43,6 +37,7 @@
           pkgs.k9s
           pkgs.kluctl
           pkgs.kubectl
+          pkgs.kubelogin
           pkgs.kubernetes-helm
         ];
       };
@@ -82,11 +77,6 @@
           toolchain
         ];
         RUST_SRC_PATH = "${toolchain}/lib/rustlib/src/rust/library";
-      };
-      devShells.unison = pkgs.mkShell {
-        packages = [
-          pkgs.unison-ucm
-        ];
       };
     });
 }

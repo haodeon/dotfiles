@@ -1,16 +1,26 @@
--- Customize Mason plugins
+-- Customize Mason
 
 ---@type LazySpec
 return {
-  -- use mason-lspconfig to configure LSP installations
+  -- use mason-tool-installer for automatically installing Mason packages
   {
-    "williamboman/mason-lspconfig.nvim",
-    -- overrides `require("mason-lspconfig").setup(...)`
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    -- overrides `require("mason-tool-installer").setup(...)`
     opts = {
+      -- Make sure to use the names found in `:Mason`
       ensure_installed = {
+        -- install language servers
         "fsautocomplete",
-        "jedi_language_server",
-        -- add more arguments for adding more language servers
+        "jedi-language-server",
+
+        -- install formatters
+        "fantomas",
+
+        -- install debuggers\
+        "codelldb",
+        "debugpy",
+
+        -- install any other package
       },
     },
   },
@@ -19,26 +29,11 @@ return {
     "jay-babu/mason-null-ls.nvim",
     -- overrides `require("mason-null-ls").setup(...)`
     opts = {
-      ensure_installed = {
-        "fantomas",
-        -- add more arguments for adding more null-ls sources
-      },
       handlers = {
         -- Set the default setup for all sources not explicitly mentioned
         function(source_name, methods) require("mason-null-ls").default_setup(source_name, methods) end,
         -- Disable fantomas
         fantomas = function() end,
-      },
-    },
-  },
-  {
-    "jay-babu/mason-nvim-dap.nvim",
-    -- overrides `require("mason-nvim-dap").setup(...)`
-    opts = {
-      ensure_installed = {
-        "codelldb",
-        "python",
-        -- add more arguments for adding more debuggers
       },
     },
   },
