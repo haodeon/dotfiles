@@ -14,6 +14,7 @@
 
   home.packages = with pkgs; [
     dotnetCorePackages.dotnet_9.sdk
+    pyrefly
     unison-ucm
   ];
 

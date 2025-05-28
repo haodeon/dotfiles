@@ -18,6 +18,10 @@
     '';
   };
 
+  programs.nushell = {
+    enable = true;
+  };
+
   programs.eza = {
     enable = true;
     enableZshIntegration = true;

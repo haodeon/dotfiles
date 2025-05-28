@@ -30,4 +30,9 @@
   };
 
   programs.bat.enable = true;
+
+  programs.broot = {
+    enable = true;
+    enableNushellIntegration = true;
+  };
 }
