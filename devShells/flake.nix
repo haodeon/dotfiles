@@ -57,7 +57,6 @@
           python3
           python3Packages.pytest
           python3Packages.pytest-subtests
-          poetry
         ]
         ++ lib.optionals stdenv.isDarwin [
           libffi

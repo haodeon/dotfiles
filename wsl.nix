@@ -6,8 +6,8 @@
     ./git.nix
     ./neovim
     ./nushell.nix
-    ./tmux.nix
-    ./zsh.nix
+    ./shells.nix
+    ./terminal.nix
   ];
 
   home.username = "deon";
@@ -33,7 +33,7 @@
   programs.home-manager.enable = true;
 
   programs.zsh = {
-    initExtra = ''
+    initContent = ''
       case ":$PATH:" in
       *":$PNPM_HOME:"*) ;;
       *) export PATH="$PNPM_HOME:$PATH" ;;

@@ -9,7 +9,7 @@
       searchUpKey = ["^[OA" "^[[A"];
       searchDownKey = ["^[OB" "^[[B"];
     };
-    initExtra = ''
+    initContent = ''
       nd() { nix develop $1 -c $SHELL }
       export GPG_TTY=$TTY
       bindkey "^[[3~" delete-char
