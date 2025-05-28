@@ -5,7 +5,6 @@
     ./dev
     ./git.nix
     ./neovim
-    ./nushell.nix
     ./shells.nix
     ./terminal.nix
   ];
