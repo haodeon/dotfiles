@@ -36,6 +36,7 @@
         style = "bold yellow";
       };
     };
+    enableNushellIntegration = true;
     enableZshIntegration = true;
   };
 }

@@ -20,7 +20,6 @@
   xdg.configFile."nvim/lazy-lock.json" = {
     source = config.lib.file.mkOutOfStoreSymlink "${config.xdg.configHome}/home-manager/neovim/lazy-lock.json";
   };
-  xdg.dataFile."nvim/site/syntax/8th.vim".source = ./8th.vim;
 
   programs.fzf.enable = true;
   programs.ripgrep.enable = true;

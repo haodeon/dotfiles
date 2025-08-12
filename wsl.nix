@@ -27,6 +27,10 @@
     PNPM_HOME = "${config.home.homeDirectory}/.local/share/pnpm";
   };
 
+  home.sessionPath = [
+    "/mnt/c/8th/25.06/bin/lin64"
+  ];
+
   home.stateVersion = "23.05";
 
   programs.home-manager.enable = true;
