@@ -10,6 +10,10 @@
 
   programs.uv = {
     enable = true;
+    settings = {
+      python-downloads = "manual";
+      python-preference = "system";
+    };
   };
 
   home.packages = with pkgs; [

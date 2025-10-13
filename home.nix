@@ -15,6 +15,7 @@
   home.homeDirectory = "/home/haodeon";
 
   home.packages = [
+    pkgs.distrobox
     pkgs.docker-compose
     pkgs.glow
     pkgs.exercism

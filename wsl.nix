@@ -28,6 +28,7 @@
   };
 
   home.sessionPath = [
+    "${config.home.homeDirectory}/.local/share/pnpm"
     "/mnt/c/8th/25.06/bin/lin64"
   ];
 
@@ -36,12 +37,8 @@
   programs.home-manager.enable = true;
 
   programs.zsh = {
-    initContent = ''
-      case ":$PATH:" in
-      *":$PNPM_HOME:"*) ;;
-      *) export PATH="$PNPM_HOME:$PATH" ;;
-      esac
-    '';
+    # initContent = ''
+    # '';
     profileExtra = ''
       if [ -e /home/deon/.nix-profile/etc/profile.d/nix.sh ]; then . /home/deon/.nix-profile/etc/profile.d/nix.sh; fi
     '';
