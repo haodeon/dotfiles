@@ -29,8 +29,17 @@
 
   home.sessionPath = [
     "${config.home.homeDirectory}/.local/share/pnpm"
-    "/mnt/c/8th/25.06/bin/lin64"
+    "/mnt/c/8th/current/bin/lin64"
   ];
+
+  home.file.".pengwinbackupignore".text = ''
+    .cache
+    .nuget
+    .local/share/nvim/lazy
+    .local/share/nvim/mason/packages
+    .local/share/pnpm/nodejs
+    .local/share/pnpm/store
+  '';
 
   home.stateVersion = "23.05";
 
