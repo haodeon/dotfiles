@@ -17,7 +17,7 @@
   };
 
   home.packages = with pkgs; [
-    dotnetCorePackages.dotnet_9.sdk
+    dotnetCorePackages.dotnet_10.sdk
     pyrefly
     unison-ucm
   ];
