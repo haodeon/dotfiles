@@ -10,12 +10,12 @@
     plugins = with pkgs; [
       {
         plugin = tmuxPlugins.power-theme.overrideAttrs ( _: {
-          version = "unstable-2024-12-29";
+          version = "unstable-2026-02-09";
           src = pkgs.fetchFromGitHub {
             owner = "wfxr";
             repo = "tmux-power";
-            rev = "e68f9e6fb42cf372c2f17b51edc63abb4f6e9558";
-            sha256 = "sha256-A+GYM+QegeivfwThfZ0vlAt/Lo4dOjnYomucEZNExlM=";
+            rev = "7a64f96f90912b0b8e290e2ce26a243bc6239211";
+            sha256 = "sha256-RTt2MXrbXwzHST9pdOwz8fADJmmBPE7upOFD8Ox7u1o=";
           };
         });
         extraConfig = ''

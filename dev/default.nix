@@ -18,11 +18,22 @@
 
   home.packages = with pkgs; [
     dotnetCorePackages.dotnet_10.sdk
+    opencode
     pyrefly
     unison-ucm
   ];
 
   home.sessionVariables = {
     DOTNET_ROOT = "${config.home.profileDirectory}/share/dotnet";
+  };
+
+  programs.helix.languages = {
+    language = [{
+      name = "python";
+      language-servers = ["ruff" "jedi" "pyrefly"];
+    }];
+  };
+  programs.helix.settings = {
+    theme = "tokyonight_moon";
   };
 }
