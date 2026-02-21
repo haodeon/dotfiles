@@ -38,6 +38,7 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       "lua_ls",
+      "pyrefly",
       "regal",
       "ruff",
       "rust_analyzer",
@@ -46,6 +47,22 @@ return {
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
     config = {
+      pyrefly = {
+        cmd = { "pyrefly", "lsp" },
+        filetypes = { "python" },
+        root_dir = require("lspconfig.util").root_pattern(
+          "pyrefly.toml",
+          "pyproject.toml",
+          "setup.py",
+          "setup.cfg",
+          "requirements.txt",
+          "Pipfile",
+          ".git"
+        ),
+        on_exit = function(code)
+          vim.notify("Closing Pyrefly LSP exited with code: " .. code, vim.log.levels.INFO)
+        end,
+      },
       rust_analyzer = {
         on_attach = function(_, bufnr)
           local rt = require "rust-tools"
